@@ -12,10 +12,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+
+    backgroundColor: "azure",
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 100
+    // marginTop: 100
   },
 });

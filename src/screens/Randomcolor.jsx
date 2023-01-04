@@ -73,11 +73,10 @@ const styles = StyleSheet.create({
     btn: {
         padding: 10,
         borderRadius: 10,
-        borderWidth: 4,
-        borderLeftWidth: 2,
-        borderRightWidth: 2,
-        borderColor: "cyan",
+
+
         backgroundColor: "black",
+        marginTop: 100
 
 
 
