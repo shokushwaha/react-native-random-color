@@ -4,12 +4,14 @@ import React, { useState } from 'react'
 const Randomcolor = () => {
 
     const [newColor, setNewColor] = useState([]);
+    const [totalColors, setTotalColors] = useState(0);
 
 
     const randomColor = () => {
         const red = Math.floor(Math.random() * 256);
         const green = Math.floor(Math.random() * 256);
         const blue = Math.floor(Math.random() * 256);
+        setTotalColors(totalColors + 1);
 
         return `rgb(${red},${green},${blue})`;
     }
@@ -19,10 +21,19 @@ const Randomcolor = () => {
                 onPress={() => {
                     setNewColor([...newColor, randomColor()]);
                 }}  >
-                <Text>Generate Random Color....</Text>
+                <Text style={{
+                    color: "azure",
+                    padding: 10
+                }} >Generate Random Color....</Text>
             </TouchableOpacity>
 
-
+            <Text style={{
+                padding: 10,
+                borderColor: "gray",
+                borderWidth: 1,
+                marginVertical: 10,
+                textAlign: "center"
+            }}  > Total Colors Generated - {totalColors}</Text>
             <FlatList
                 showsVerticalScrollIndicator={false}
                 style={styles.list}
@@ -65,8 +76,10 @@ const styles = StyleSheet.create({
         borderWidth: 4,
         borderLeftWidth: 2,
         borderRightWidth: 2,
-        borderColor: "black",
-        backgroundColor: "turquoise"
+        borderColor: "cyan",
+        backgroundColor: "black",
+
+
 
     }
 })
